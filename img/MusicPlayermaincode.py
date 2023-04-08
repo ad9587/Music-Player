@@ -1,6 +1,3 @@
-
-
-
 import os
 from tkinter import *
 from tkinter import Tk
@@ -23,7 +20,6 @@ def AddMusic():
         for song in songs:
             if song.endswith(".mp3"):
                 Playlist.insert(END, song)
-
 
 def PlayMusic():
     Music_Name = Playlist.get(ACTIVE)
