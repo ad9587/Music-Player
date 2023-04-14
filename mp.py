@@ -21,6 +21,7 @@ def AddMusic():
             if song.endswith(".mp3"):
                 Playlist.insert(END, song)
 
+
 def PlayMusic():
     Music_Name = Playlist.get(ACTIVE)
     print(Music_Name[0:-4])
@@ -28,36 +29,36 @@ def PlayMusic():
     mixer.music.play()
 
 
-image_icon = PhotoImage(file="logo.png")
+image_icon = PhotoImage(file="img\logo.png")
 root.iconphoto(False, image_icon)
 
-Top_Image = PhotoImage(file="top.png")
+Top_Image = PhotoImage(file="img\ptop.png")
 Label(root, image=Top_Image, bg="#0f1a2b").place(x=0, y=-210)
  
 
-logo_Image = PhotoImage(file="logo.png")
+logo_Image = PhotoImage(file="img\logo.png")
 Label(root, image=logo_Image, bg="#0f1a2b").place(x=145, y=60)
 
 
 
-ButtonPlay = PhotoImage(file="play.png")
+ButtonPlay = PhotoImage(file="img\play.png")
 Button(root, image=ButtonPlay, bg="#0f1a2b", bd=0,
        command=PlayMusic).place(x=225, y=500)
 
-ButtonStop = PhotoImage(file="stop.png")
+ButtonStop = PhotoImage(file="img\stop.png")
 Button(root, image=ButtonStop, bg="#0f1a2b", bd=0,
        command=mixer.music.stop).place(x=125, y=600)
 
-ButtonResume = PhotoImage(file="resume.png")
+ButtonResume = PhotoImage(file="img\presume.png")
 Button(root, image=ButtonResume, bg="#0f1a2b", bd=0,
        command=mixer.music.unpause).place(x=225, y=600)
 
-ButtonPause = PhotoImage(file="pause.png")
+ButtonPause = PhotoImage(file="img\pause.png")
 Button(root, image=ButtonPause, bg="#0f1a2b", bd=0,
        command=mixer.music.pause).place(x=325, y=600)
 
 
-Menu = PhotoImage(file="menu.png")
+Menu = PhotoImage(file="img\menu.png")
 Label(root, image=Menu, bg="#0f1a2b").pack(padx=10, pady=200, side=LEFT)
 
 Frame_Music = Frame(root, bd=2, relief=RIDGE)
